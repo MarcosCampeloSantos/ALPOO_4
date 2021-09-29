@@ -172,17 +172,34 @@ public class Ordenar extends javax.swing.JFrame {
         int Valor4 = Integer.parseInt(jTextField7.getText());
         int Valor5 = Integer.parseInt(jTextField8.getText());
         
-        List<Integer> Valores = Arrays.asList(
-            Valor1,
-            Valor2,
-            Valor3,
-            Valor4,
-            Valor5
-        );
-        
+       int[] dados = {
+           Valor1,
+           Valor2,
+           Valor3,
+           Valor4,
+           Valor5
+       };
        
+       int aux = 0;
         
+        for(int i = 0; i <= 3; i++){
+            for(int u = 1; u <= 4; u++){
+                if(dados[i] > dados[u]){
+                    aux = dados[u];
+                    dados[u] = dados[i];
+                    dados[i] = aux;
+                    if(i != 0 || u != 0){
+                        
+                        u--;
+                        i--;
+                    }
+                }
+            }
+       }
         
+       for(int i = 0; i < dados.length; i++){
+           System.out.println(dados[i]);
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
