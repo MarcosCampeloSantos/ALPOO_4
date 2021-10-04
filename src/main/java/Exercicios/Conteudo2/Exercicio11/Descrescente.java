@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Descrescente extends javax.swing.JFrame {
     
-    int vetorNumero[] = new int[11];
+    int vetorNumero[] = new int[10];
     
     int aux = 0;
     
@@ -57,7 +57,7 @@ public class Descrescente extends javax.swing.JFrame {
 
         jLabel3.setText("Descrecente");
 
-        jLabel4.setText("Numeros");
+        jLabel4.setText("Crescente");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -172,14 +172,7 @@ public class Descrescente extends javax.swing.JFrame {
         if (posicao < 10){ // Verifica se os vetores estão cheios
 
             vetorNumero[posicao] = Numero;
-            
-            list1.add(Integer.toString(vetorNumero[posicao]));
-
-            
             posicao = posicao+1;
-
-                    
-            
         }
         else{
             for(int i = 1; i < 10; i++){
@@ -197,6 +190,20 @@ public class Descrescente extends javax.swing.JFrame {
             for(int i = 0; i < 10; i++){
                 list2.add(Integer.toString(vetorNumero[i]));
                 
+            }
+            
+            for(int i = 0; i <= 8; i++){
+                for(int u = i; u <= 9; u++){
+                    if(vetorNumero[i] > vetorNumero[u]){
+                        aux = vetorNumero[u];
+                        vetorNumero[u] = vetorNumero[i];
+                        vetorNumero[i] = aux;
+                    }
+                }
+            }
+            
+            for(int i = 0; i < 10; i++){
+                list1.add(Integer.toString(vetorNumero[i]));
             }
             JOptionPane.showMessageDialog(null,"Vetor Cheio.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
