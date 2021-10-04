@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exercicios.Conteudo2.Exercicio6;
+package Exercicios.Conteudo2.Exercicio7;
 
 /**
  *
  * @author marco
  */
-public class Dividendo extends javax.swing.JFrame {
+public class Divisor extends javax.swing.JFrame {
 
     /**
      * Creates new form Dividendo
      */
-    public Dividendo() {
+    public Divisor() {
         initComponents();
     }
 
@@ -152,16 +152,20 @@ public class Dividendo extends javax.swing.JFrame {
         
         int contador_dividendo = dividendo_fim - dividendo_ini;
         int contador_divisor = divisor_fim - divisor_ini;
-        int contador = contador_dividendo / contador_divisor;
+        int contador =  contador_divisor / contador_dividendo;
         
         int dividendo_total = 0;
         int divisor_total = 0;
         
-        for(int i = dividendo_ini; i <= dividendo_fim; i = i + Math.round(contador)){
+        for(int i = dividendo_ini; i <= dividendo_fim; i++){
+            dividendo_total = dividendo_total - i;
+            i = i + 1;
             dividendo_total = dividendo_total + i;
         }
         
-        for(int i = divisor_ini; i <= divisor_fim; i++){
+        for(int i = divisor_ini; i <= divisor_fim; i = i + Math.round(contador)){
+            divisor_total = divisor_total - i;
+            i = i + Math.round(contador);
             divisor_total = divisor_total + i;
         }
         
@@ -189,20 +193,21 @@ public class Dividendo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dividendo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Divisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dividendo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Divisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dividendo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Divisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dividendo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Divisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Dividendo().setVisible(true);
+                new Divisor().setVisible(true);
             }
         });
     }
