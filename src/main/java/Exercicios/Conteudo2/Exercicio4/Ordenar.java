@@ -5,8 +5,6 @@
  */
 package Exercicios.Conteudo2.Exercicio4;
 
-import java.util.Arrays;
-import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author marcossantos
