@@ -254,7 +254,7 @@ public class Onibus_Assento extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
-        if (jTable1.getSelectedRow()!= -1 && jTable1.getValueAt(jTable1.getSelectedRow(),1) == null || jTable1.getValueAt(jTable1.getSelectedRow(),2) == null || jTable1.getValueAt(jTable1.getSelectedRow(),3) == null || jTable1.getValueAt(jTable1.getSelectedRow(),4) == null){ //-1 representa que não selecionou a linha da tabela= indice -1
+        if (jTable1.getSelectedRow() != -1 && jTable1.getValueAt(jTable1.getSelectedRow(),1) == null || jTable1.getValueAt(jTable1.getSelectedRow(),2) == null || jTable1.getValueAt(jTable1.getSelectedRow(),3) == null || jTable1.getValueAt(jTable1.getSelectedRow(),4) == null){ //-1 representa que não selecionou a linha da tabela= indice -1
             jTextField5.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 4).toString());   
             
             jTextField2.setText("");
